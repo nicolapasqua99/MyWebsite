@@ -48,3 +48,4 @@ amplifyconfiguration.json
 amplify-gradle-config.json
 amplifyxc.config
 .fake
+*.exe
