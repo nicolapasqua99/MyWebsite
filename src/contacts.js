@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ReactSVG } from 'react-svg';
 import { primary, secondary, tertiary } from './configs/colors';
 
 const TitleList = styled.h2`
     position: relative;
-    padding-top: 16vh;
+    padding-top: 18vh;  
+    padding-bottom: 2vh;
     left: 0vh;
     width: 100vw;
     line-height: 6rem;
@@ -14,9 +16,47 @@ const TitleList = styled.h2`
     color: ${props => props.color || 'black'}; 
 `
 
+const SocialLink = styled.a`
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    left: 48vw;
+    display: block;
+    &:after {
+        content: '';
+        position: absolute;
+        top: calc(2vw - 1px);
+        left: calc(2vw - 1px);
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: all .5s ease-in-out;
+    }
+    &:hover:after {
+        top: calc(-1vw - 2px);
+        left: calc(-1vw - 2px);
+        width: 6vw;
+        height: 6vw;
+        border: 2px solid ${props => props.color || 'white'} ;
+    }
+    & div{
+        width: 4vw;
+        height: 4vw;
+        margin: 6vh 0;
+    }
+    & svg{  
+        width: 100%;
+        height: 100%;
+        & path{
+            fill: ${props => props.color || 'white'} !important;
+        }
+    }
+`
+
 const Container = styled.div`
     position: relative;
-    padding-top: 52vh;
+    margin-top: 8vh;
     left: 20vw;
     width: 60vw;
     height: auto;
@@ -48,7 +88,6 @@ const Contact = styled.p`
     font-weight: 400;
     text-align: center;
     color: ${props => props.color || 'black'}; 
-   
 `
 
 class Contacts extends React.Component{
@@ -64,17 +103,26 @@ class Contacts extends React.Component{
     render() {
         return(
             <>
-              <TitleList color={this.state.secondaryColor}>
+                <TitleList color={this.state.secondaryColor}>
                     Get in Touch with me on my Social
-               </TitleList> 
-               <Container>
+                </TitleList> 
+                <SocialLink color={this.state.secondaryColor} target={"blank"} href='https://www.instagram.com/nicolapasqua99/'>
+                    <ReactSVG src="./img/icons/instagram.svg" />
+                </SocialLink>
+                <SocialLink color={this.state.secondaryColor} target={"blank"} href='https://www.linkedin.com/in/nicola-pasqualini-27988219a'>
+                    <ReactSVG src="./img/icons/linkedin.svg" />
+                </SocialLink>
+                <SocialLink color={this.state.secondaryColor} target={"blank"} href='https://github.com/nicolapasqua99'>
+                    <ReactSVG src="./img/icons/github.svg" />
+                </SocialLink>
+                <Container>
                     <DescContact color={this.state.secondaryColor}>
                         Or send me an email at
                     </DescContact>
                     <Contact color={this.state.secondaryColor}>
                         nicolapasqua99@gmail.com
                     </Contact>
-               </Container>
+                </Container>
             </>
         );
     }

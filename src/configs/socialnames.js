@@ -18,30 +18,7 @@ const parallax1 = [
                 property: 'translateY',
             },
         ],
-    },
-    {
-        start: '420vh',
-        duration: '30vh',
-        properties: [
-            {
-                startValue: 3,
-                endValue: 49,
-                unit: 'vw',
-                property: 'translateX',
-            },
-            {
-                startValue: 4,
-                endValue: 28,
-                unit: 'vh',
-                property: 'translateY',
-            },
-            {
-                startValue: 1,
-                endValue: 2,
-                property: 'scale',
-            }
-        ],
-    },
+    }
 ];
 
 const parallax2 = [
@@ -62,30 +39,7 @@ const parallax2 = [
                 property: 'translateY',
             },
         ],
-    },
-    {
-        start: '420vh',
-        duration: '30vh',
-        properties: [
-            {
-                startValue: 6,
-                endValue: 49,
-                unit: 'vw',
-                property: 'translateX',
-            },
-            {
-                startValue: 4,
-                endValue: 43,
-                unit: 'vh',
-                property: 'translateY',
-            },
-            {
-                startValue: 1,
-                endValue: 2,
-                property: 'scale',
-            }
-        ],
-    },
+    }
 ];
 
 const parallax3 = [
@@ -106,30 +60,7 @@ const parallax3 = [
                 property: 'translateY',
             }
         ],
-    },
-    {
-        start: '420vh',
-        duration: '30vh',
-        properties: [
-            {
-                startValue: 9,
-                endValue: 49,
-                unit: 'vw',
-                property: 'translateX',
-            },
-            {
-                startValue: 4,
-                endValue: 58,
-                unit: 'vh',
-                property: 'translateY',
-            },
-            {
-                startValue: 1,
-                endValue: 2,
-                property: 'scale',
-            }
-        ],
-    },
+    }
 ];
 
 const parallaxColor = [
@@ -167,13 +98,13 @@ const parallaxColor = [
         ],
     },
     {
-    start: '420vh',
-    duration: '20vh',
+    start: '350vh',
+    duration: '90vh',
         properties: [
             {
-                startValue: tertiary,
-                endValue: secondary,
-                property: 'fill',
+                startValue: 1,
+                endValue: 0,
+                property: 'opacity',
             },
         ],
     },
@@ -183,9 +114,6 @@ let contacts = [
     { src:'./img/icons/instagram.svg', parallaxPosition: parallax1, parallaxColor: parallaxColor, link: "https://www.instagram.com/nicolapasqua99/"}, 
     { src:'./img/icons/linkedin.svg', parallaxPosition: parallax2, parallaxColor: parallaxColor, link: "https://www.linkedin.com/in/nicola-pasqualini-27988219a"},
     { src:'./img/icons/github.svg', parallaxPosition: parallax3, parallaxColor: parallaxColor, link: "https://github.com/nicolapasqua99"}, 
-    //{ src:'./img/icons/twitter.svg', parallaxPosition: parallax4, parallaxColor: parallaxColor4 },
-    //{ src:'./img/icons/pinterest.svg', parallaxPosition: parallax5, parallaxColor: parallaxColor5 }, 
-    //{ src:'./img/icons/behance.svg', parallaxPosition: parallax6, parallaxColor: parallaxColor6 }
 ];
 
 export default contacts;
