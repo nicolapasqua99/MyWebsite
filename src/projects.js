@@ -106,10 +106,10 @@ class Projects extends React.Component{
     render() {
         return(
             <>
-              <TitleList color={this.state.primaryColor}>
+                <TitleList color={this.state.primaryColor}>
                     Some project I've worked on
-               </TitleList>  
-               <Container>
+                </TitleList>  
+                <Container>
                     <TitleProject color={this.state.primaryColor}>
                         My Site
                     </TitleProject>
@@ -168,7 +168,7 @@ class Projects extends React.Component{
                         Miari Admin is a simple website with authentication created in Django that lets Miari Magazine admins look at the submission that has been sent.
                         <a target={"blank"} href={ "https://miariadmin.herokuapp.com/auth" }>miariadmin.herokuapp.com</a>
                     </UniProjectDesc>
-               </Container>
+                </Container>
             </>
         );
     }
